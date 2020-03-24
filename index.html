@@ -64,6 +64,59 @@
 </div>
 </div>
 </div>
+<script>
+  var ujiantulis1 = document.getElementById("tulis1");
+  var ujiantulis2 = document.getElementById("tulis2");
+  var ujianpraktek = document.getElementById("praktek");
+  var hasilujian = document.getElementById("nilaiujian");
+
+  var tulis1 = 70;
+  var tulis2 = 90;
+  var praktek = 80;
+  var nilaiujian = (tulis1 + tulis2 + praktek) / 3;
+
+  ujiantulis1.innerHTML = "Nilai Ujian Tulis UTS : " + tulis1;
+  ujiantulis2.innerHTML = "Nilai Ujian Tulis UAS : " + tulis2;
+  ujianpraktek.innerHTML = "Nilai Ujian Praktek : " + praktek;
+  hasilujian.innerHTML = "Nilai Rata-rata Ujian : " + nilaiujian;
+
+
+  var nilaitoefl = document.getElementById("toefl");
+  var scoretoefl = document.getElementById("toefl1");
+  var toefl = 500;
+  var toefl1 = 500;
+
+
+  if (toefl >= 500) {
+      nilaitoefl.innerHTML = "Nilai 100";
+  }
+  else if (toefl > 450) {
+      nilaitoefl.innerHTML = "Nilai 80";
+  }
+  else if (toefl < 450) {
+      nilaitoefl.innerHTML = "Nilai 50";
+  }
+
+  scoretoefl.innerHTML = "Score : " + toefl1;
+
+  var statusbeasiswa = document.getElementById("beasiswa");
+
+  var nilaitoefl = 80;
+  var beasiswa = (nilaiujian + nilaitoefl) / 2;
+
+  var statusbsw = document.getElementById("nilai");
+
+  var nilai = 80
+  if (nilai > 90) {
+      statusbsw.innerHTML = "LULUS";
+  }
+  else if (nilai < 85) {
+      statusbsw.innerHTML = "TIDAK LULUS";
+  }
+  statusbeasiswa.innerHTML = "Nilai : " + beasiswa;
+
+
+</script>
     <script src="bootstrap/js/bootstrep.js"></script>
     <script src="bootstrap/js/jquery.js"></script>
     <script src="bootstrap/js/pooper.js"></script>
